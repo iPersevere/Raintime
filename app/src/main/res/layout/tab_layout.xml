@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.dell.raintime.tabhost.CustomViewPager
+            android:id="@+id/tab_content_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tabs_rg" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/tab_extension_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tabs_rg"
+            android:visibility="gone"/>
+
+        <com.dell.raintime.tabhost.MyRadioGroup
+            android:id="@+id/tabs_rg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tab_bg"
+            android:gravity="center"
+            android:minHeight="@dimen/tab_layout_default_height"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <ViewStub
+                android:id="@+id/tab_rb_layout_0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout="@layout/tab_item_layout"
+                android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/tab_rb_layout_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout="@layout/tab_item_layout"
+                android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/tab_rb_layout_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout="@layout/tab_item_layout"
+                android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/tab_rb_layout_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout="@layout/tab_item_layout"
+                android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/tab_rb_layout_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout="@layout/tab_item_layout"
+                android:visibility="gone" />
+        </com.dell.raintime.tabhost.MyRadioGroup>
+
+        <Button
+            android:id="@+id/tab_middle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:background="@drawable/tab_icon_middle_selector" />
+    </RelativeLayout>
+
+</TabHost>

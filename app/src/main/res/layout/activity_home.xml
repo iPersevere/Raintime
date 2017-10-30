@@ -1,0 +1,29 @@
+<com.dell.raintime.libs.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:tools="http://schemas.android.com/tools"
+                                       android:id="@+id/dl"
+                                       android:layout_width="fill_parent"
+                                       android:layout_height="fill_parent"
+                                       android:clickable="true"
+                                       android:orientation="vertical"
+                                       tools:context=".HomeActivity"
+                                       android:background="@drawable/bg1"
+    >
+
+    <include layout="@layout/left_menu" />
+
+    <com.dell.raintime.libs.MyRelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical"> 
+
+        <fragment
+            android:id="@+id/tab_bar_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            class="com.dell.raintime.tabhost.TabFragment" />
+    </com.dell.raintime.libs.MyRelativeLayout>
+
+</com.dell.raintime.libs.DragLayout>
